@@ -1,0 +1,57 @@
+/**
+* Name: Shalimar C. Campo
+* Section: BSIT-Fidelity
+* Year:4th year
+*/
+import java.util.Scanner;
+import java.text.DecimalFormat;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		DecimalFormat df = new DecimalFormat(".##");
+		
+		int user_input;
+		int again = 0;
+		int divide;
+		double grade;
+		double total_grade = 0;
+		
+		System.out.print("Would you like to enter grades? [1]. Yes and [2]. No: ");
+		user_input = in.nextInt();
+		
+		switch(user_input)
+		{
+		    case 1:
+		        while(again < 2)
+		        {
+		            System.out.print("Enter a Grade: ");
+		            grade = in.nextDouble();
+		            
+		            System.out.print("Enter grade again? [1]. Yes and [2]. No: ");
+		            again = in.nextInt();
+		            
+		            if(again > 2)
+		            {
+		                System.out.println("Invalid Input");
+		                while(again > 2)
+		                {
+		                    System.out.print("Please enter grade again: ");
+		                    again = in.nextInt();
+		                }
+		            }
+		            total_grade += grade;
+		        }
+		        
+		        System.out.print("How many grades you entered? ");
+		        divide = in.nextInt();
+		        System.out.println("Average:" + df.format(total_grade / divide) );
+		    break;
+		    case 2:
+		        System.out.println("...GOODBYE USER...");
+		    break;
+		    default:
+		        System.out.println("Invalid Input Number");
+		}
+	}
+}
