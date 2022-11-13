@@ -1,0 +1,187 @@
+/**
+* Name: Richard C. Cupal
+* Section: IT Dept
+* Year: 2nd Year
+*/
+import java.util.Scanner;
+import java.text.DecimalFormat;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		DecimalFormat df = new DecimalFormat(".##");
+		int customer;
+		int many;
+		int order_again = 0;
+		int total_price = 0;
+		int money;
+		double total_amount = 0;
+		double change;
+		char order;
+		
+		
+		System.out.print("Good Day! Would you like to order? [1. YES and 2. NO]: ");
+		customer = in.nextInt();
+		
+		switch(customer)
+		{
+		    case 1:
+		        System.out.println("==============FOOD ORDER LIST=============");
+		        System.out.println("               RJ's RESTAURANT            ");
+                System.out.println("                   -FOODS-                ");
+	    	    System.out.println("  A. Fried Chicken             Php 50.00  ");
+	    	    System.out.println("  B. Beef Adobo                Php 55.00  ");
+	    	    System.out.println("  C. Miso Ramen                Php 65.00  ");
+	    	    System.out.println("  D. Hamburger                 Php 85.00  ");
+	    	    System.out.println("  E. Hamburger with Fries      Php 99.00  ");
+	    	    System.out.println("                   -SNACKS-               ");
+	    	    System.out.println("  F. Onion Rings               Php 35.00  ");
+	    	    System.out.println("  G. Crispy Patata             Php 20.00  ");
+                System.out.println("  H. Pretzel                   Php 35.00  ");
+                System.out.println("  I. Muffins                   Php 25.00  ");
+	    	    System.out.println("                  -BEVERAGES-             ");
+	    	    System.out.println("  J. Green Tea                 Php 25.00  ");
+	    	    System.out.println("  K. Coke                      Php 30.00  ");
+	    	    System.out.println("  L. Sprite                    Php 30.00  ");
+	    	    System.out.println("  M. Bottle Water              php 20.00  ");
+	    	    System.out.println("===========================================");
+	    	    
+	    	    while(order_again < 2)
+	    	    {
+	    	        System.out.print("What would you like to order? ");
+	    	        order = in.next().charAt(0);
+	    	        
+	    	            if(order == 'a' || order == 'A')
+	    	            {
+	    	                System.out.println("You have ordered Fried Chicken ");
+	    	                System.out.print("How many: ");
+	    	                many = in.nextInt();
+	    	                total_price = 50 * many;
+	    	            }
+	    	            else if(order == 'b' || order == 'B')
+	    	            {
+	    	                System.out.println("You have ordered Beef Adobo ");
+	    	                System.out.print("How many: ");
+	    	                many = in.nextInt();
+	    	                total_price = 55 * many;
+	    	            }
+	    	            else if(order == 'c' || order == 'C')
+	    	            {
+	    	                System.out.println("You have ordered Miso Ramen ");
+	    	                System.out.print("How many: ");
+	    	                many = in.nextInt();
+	    	                total_price = 65 * many;
+	    	            }
+	    	            else if(order == 'd' || order == 'D')
+	    	            {
+	    	                System.out.println("You have ordered Hamburger ");
+	    	                System.out.print("How many: ");
+	    	                many = in.nextInt();
+	    	                total_price = 85 * many;
+	    	            }
+	    	            else if(order == 'e' || order == 'E')
+	    	            {
+	    	                System.out.println("You have ordered Hamburger with Fries ");
+	    	                System.out.print("How many: ");
+	    	                many = in.nextInt();
+	    	                total_price = 99 * many;
+	    	            }
+	    	            else if(order == 'f' || order == 'F')
+	    	            {
+	    	                System.out.println("You have ordered Onion Rings ");
+	    	                System.out.print("How many: ");
+	    	                many = in.nextInt();
+	    	                total_price = 35 * many;
+	    	            }
+	    	            else if(order == 'g' || order == 'G')
+	    	            {
+	    	                System.out.println("You have ordered Crispy Patata ");
+	    	                System.out.print("How many: ");
+	    	                many = in.nextInt();
+	    	                total_price = 20 * many;
+	    	            }
+	    	            else if(order == 'h' || order == 'H')
+	    	            {
+	    	                System.out.println("You have ordered Pritzel ");
+	    	                System.out.print("How many: ");
+	    	                many = in.nextInt();
+	    	                total_price = 35 * many;
+	    	            }
+	    	            else if(order == 'i' || order == 'I')
+	    	            {
+	    	                System.out.println("You have ordered Muffins ");
+	    	                System.out.print("How many: ");
+	    	                many = in.nextInt();
+	    	                total_price = 25 * many;
+	    	            }
+	    	            else if(order == 'j' || order == 'J')
+	    	            {
+	    	                System.out.println("You have ordered Green Tea ");
+	    	                System.out.print("How many: ");
+	    	                many = in.nextInt();
+	    	                total_price = 25 * many;
+	    	            }
+	    	            else if(order == 'k' || order == 'K')
+	    	            {
+	    	                System.out.println("You have ordered Coke ");
+	    	                System.out.print("How many: ");
+	    	                many = in.nextInt();
+	    	                total_price = 30 * many;
+	    	            }
+	    	            else if(order == 'l' || order == 'L')
+	    	            {
+	    	                System.out.println("You have ordered Sprite ");
+	    	                System.out.print("How many: ");
+	    	                many = in.nextInt();
+	    	                total_price = 30 * many;
+	    	            }
+	    	            else if(order == 'm' || order == 'M')
+	    	            {
+	    	                System.out.println("You have ordered Bottle Water ");
+	    	                System.out.print("How many: ");
+	    	                many = in.nextInt();
+	    	                total_price = 20 * many;
+	    	            }
+	    	            else
+	    	            {
+	    	                System.out.println("No Items orderd");
+	    	            }
+	    	        System.out.print("Would you like to order again? [1. YES and 2. NO]: ");
+	    	        order_again = in.nextInt();
+	    	        
+	    	        total_amount += total_price;
+	    	    }
+	    	    
+	    	    if(order_again == 2)
+	    	    {
+	    	        System.out.println("Total Amount: "+df.format(total_amount));
+	    	        System.out.print("Money Paid: ");
+	    	        do
+	    	        {
+	    	            money = in.nextInt();
+	    	            if(money < total_amount)
+	    	            {
+	    	                System.out.println("Not enough money please add more money: ");
+	    	            }
+	    	        }while(money < total_amount);
+	    	        
+	    	        if(money >= total_amount)
+	    	        {
+	    	            change = money - total_amount;
+	    	            System.out.println("Your change is: " + df.format(change));
+	    	            System.out.println("Thank you and have a nice meal. ");
+	    	        }
+	    	    }
+	    	    else
+	    	    {
+	    	        System.out.println("Invlid Input");
+	    	    }
+	        break;
+	        case 2:
+	            System.out.println("Thank you and Goodbye");
+	        break;
+	        default:
+	            System.out.println("Invalid Input, Please try again");
+		}
+	}
+}
